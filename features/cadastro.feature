@@ -10,42 +10,22 @@ Funcionalidade: Cadastro
 
         Dado que acesso a página de cadastro
         Quando submeto o seguinte forulário de cadastro:
-            |  nome         | email         | senha  |
-            | Everton Souza | evra@evra.com | pwd123 |
+            |nome         |email        |senha |
+            |Everton Souza|evra@evra.com|pwd123|
         Então sou redirecionado para o Dashboard
 
-    @tentativa_cadastro
-    Cenario: Submeter cadastro sem o nome
+    Esquema do Cenário: Tentativa de Cadastro
 
         Dado que acesso a página de cadastro
         Quando submeto o seguinte forulário de cadastro:
-            |  nome         | email         | senha  |
-            |               | evra@evra.com | pwd123 |
-        Então vejo a mensagem de alerta: "Oops. Informe seu nome completo!"
+            |nome        |email        |senha        |
+            |<nome_input>|<email_input>|<senha_input>|
+        Então vejo a mensagem de alerta: "<mensagem_output>"
 
-    @tentativa_cadastro
-    Cenario: Submeter cadastro sem o email
-
-        Dado que acesso a página de cadastro
-        Quando submeto o seguinte forulário de cadastro:
-            |  nome         | email         | senha  |
-            | Everton Souza |               | pwd123 |
-        Então vejo a mensagem de alerta: "Oops. Informe um email válido!"
-    
-    @tentativa_cadastro
-    Cenario: Submeter cadastro com email incorreto
-
-        Dado que acesso a página de cadastro
-        Quando submeto o seguinte forulário de cadastro:
-            |  nome         | email         | senha  |
-            | Everton Souza | evra.evra.com | pwd123 |
-        Então vejo a mensagem de alerta: "Oops. Informe um email válido!"
-
-    @tentativa_cadastro
-    Cenario: Submeter cadastro sem a senha
-
-        Dado que acesso a página de cadastro
-        Quando submeto o seguinte forulário de cadastro:
-            |  nome         | email         | senha  |
-            | Everton Souza | evra@evra.com |        |
-        Então vejo a mensagem de alerta: "Oops. Informe sua senha secreta!"
+        Exemplos:
+        |nome_input   |email_input  |senha_input|mensagem_output                 |
+        |             |evra@evra.com|pwd123     |Oops. Informe seu nome completo!|
+        |Everton Souza|             |pwd123     |Oops. Informe um email válido!  |
+        |Everton Souza|evra.evra.com|pwd123     |Oops. Informe um email válido!  |
+        |Everton Souza|evra&evra.com|pwd123     |Oops. Informe um email válido!  |
+        |Everton Souza|evra@evra.com|           |Oops. Informe sua senha secreta!|
