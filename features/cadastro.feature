@@ -18,26 +18,34 @@ Funcionalidade: Cadastro
     Cenario: Submeter cadastro sem o nome
 
         Dado que acesso a página de cadastro
-        Quando submeto o meu cadastro sem o nome
+        Quando submeto o seguinte forulário de cadastro:
+            |  nome         | email         | senha  |
+            |               | evra@evra.com | pwd123 |
         Então vejo a mensagem de alerta: "Oops. Informe seu nome completo!"
 
     @tentativa_cadastro
     Cenario: Submeter cadastro sem o email
 
         Dado que acesso a página de cadastro
-        Quando submeto o meu cadastro sem o email
+        Quando submeto o seguinte forulário de cadastro:
+            |  nome         | email         | senha  |
+            | Everton Souza |               | pwd123 |
         Então vejo a mensagem de alerta: "Oops. Informe um email válido!"
     
     @tentativa_cadastro
     Cenario: Submeter cadastro com email incorreto
 
         Dado que acesso a página de cadastro
-        Quando submeto o meu cadastro com email incorreto
+        Quando submeto o seguinte forulário de cadastro:
+            |  nome         | email         | senha  |
+            | Everton Souza | evra.evra.com | pwd123 |
         Então vejo a mensagem de alerta: "Oops. Informe um email válido!"
 
     @tentativa_cadastro
     Cenario: Submeter cadastro sem a senha
 
         Dado que acesso a página de cadastro
-        Quando submeto o meu cadastro sem a senha
+        Quando submeto o seguinte forulário de cadastro:
+            |  nome         | email         | senha  |
+            | Everton Souza | evra@evra.com |        |
         Então vejo a mensagem de alerta: "Oops. Informe sua senha secreta!"
