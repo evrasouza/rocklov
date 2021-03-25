@@ -9,7 +9,9 @@ Funcionalidade: Cadastro
     Cenario: Fazer cadastro
 
         Dado que acesso a página de cadastro
-        Quando submeto o meu cadastro completo
+        Quando submeto o seguinte forulário de cadastro:
+            |  nome         | email         | senha  |
+            | Everton Souza | evra@evra.com | pwd123 |
         Então sou redirecionado para o Dashboard
 
     @tentativa_cadastro
