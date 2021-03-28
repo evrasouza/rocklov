@@ -5,6 +5,7 @@ Funcionalidade: Cadastro de Anúncios
     Quero Cadastrar meus equipamentos
     Para que eu possa disponibiliza-los para locação
 
+    @anuncios
     Cenário: Novo Equipo
 
         Dado que eu estou logado como "everton@gmail.com" e "pwd123"

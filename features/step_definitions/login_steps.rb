@@ -4,9 +4,9 @@ end
   
 Quando('submeto minhas credenciais com {string} e {string}') do |email, password|
 
-    find("input[placeholder='Seu email']").set email
-    find("input[type=password]").set password
-
-    click_button "Entrar"
+    login_page = LoginPage.new
+    login_page.campo_email.set email
+    login_page.campo_senha.set password
+    login_page.botão_entrar
 
 end
