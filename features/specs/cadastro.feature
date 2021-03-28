@@ -11,7 +11,7 @@ Funcionalidade: Cadastro
         Dado que acesso a página de cadastro
         Quando submeto o seguinte forulário de cadastro:
             | nome          | email            | senha  |
-            | Adrian Smith  | smith@gmal.com   | pwd123 |
+            | Everton Souza  | everton@gmail.com   | pwd123 |
         Então sou redirecionado para o Dashboard
 
     Esquema do Cenário: Tentativa de Cadastro
