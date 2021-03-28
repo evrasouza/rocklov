@@ -1,5 +1,5 @@
 Dado('que acesso a página de cadastro') do
-    @SignUpPage.open
+    @signup_page.open
 end
   
 Quando('submeto o seguinte forulário de cadastro:') do |table|
