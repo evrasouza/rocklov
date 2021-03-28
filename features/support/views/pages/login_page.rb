@@ -11,5 +11,4 @@ class LoginPage
         find("input[type=password]").set password
         click_button "Entrar"
     end
-
 end
