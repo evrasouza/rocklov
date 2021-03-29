@@ -21,4 +21,10 @@ end
 Então('devo ver esse item no meu dashboard') do                               
     expect(@dash_page.equipo_list).to have_content @anuncio[:nome]
     expect(@dash_page.equipo_list).to have_content "R$#{@anuncio[:preco]}/dia"
-end                                                                           
+end
+
+                                                                               
+Então('deve conter a mensagem de alerta: {string}') do |expect_alert|                
+    expect(@alert.dark).to have_text expect_alert 
+end                                                                            
+                                                                                 
