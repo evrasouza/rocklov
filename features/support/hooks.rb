@@ -4,4 +4,7 @@ Before do
   @signup_page = SignUpPage.new
   @dash_page = DashPage.new
   @equipos_page = EquiposPage.new
+
+  #page.driver.browser.manage.window.maximize
+  page.current_window.resize_to(1440, 900)
 end
