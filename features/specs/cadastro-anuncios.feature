@@ -33,8 +33,10 @@ Funcionalidade: Cadastro de Anúncios
         Então deve conter a mensagem de alerta: "<saida>"
 
         Exemplos:
-            | foto          | nome                  | categoria          | preco  | saida                             |
-            |               | Microfone Shure       | Áudio e Tecnologia | 4000   | Adicione uma foto no seu anúncio! |
-            | kramer.jpg    |                       | Cordas             | 150000 | Informe a descrição do anúncio!   |
-            | trompete.jpg  | Trompete TOP          |                    | 3000   | Informe a categoria               |
-            | fender-sb.jpg | Fender do Dave Murray | Cordas             |        | Informe o valor da diária         |
+            | foto          | nome                  | categoria          | preco  | saida                                |
+            |               | Microfone Shure       | Áudio e Tecnologia | 4000   | Adicione uma foto no seu anúncio!    |
+            | kramer.jpg    |                       | Cordas             | 150000 | Informe a descrição do anúncio!      |
+            | trompete.jpg  | Trompete TOP          |                    | 3000   | Informe a categoria                  |
+            | fender-sb.jpg | Fender do Dave Murray | Cordas             |        | Informe o valor da diária            |
+            | pedais.jpg    | Pedais de Guitarra    | Outros             | abc    | O valor da diária deve ser numérico! |
+            | sanfona.jpg   | Sanfona               | Outros             | 99c    | O valor da diária deve ser numérico! |
