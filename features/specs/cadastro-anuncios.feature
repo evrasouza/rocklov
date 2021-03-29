@@ -18,16 +18,23 @@ Funcionalidade: Cadastro de Anúncios
             | categoria | Cordas        |
             | preco     | 200           |
         Quando submeto o cadastro desse item
-        Então devo ver esse item no meu dashboard   
+        Então devo ver esse item no meu dashboard
 
-    @semfoto
-    Cenário: Anúncio sem foto
+    @tentativasCadastro
+    Esquema do Cenário: Tentativa de cadastro de anúncios
 
         Dado que acesso o formulário de cadastro de anúncios
             E que eu tenho o seguinte equipamento:
-            | thumb     |               |
-            | nome      | Fender Strato |
-            | categoria | Cordas        |
-            | preco     | 200           |
+            | thumb     | <foto>      |
+            | nome      | <nome>      |
+            | categoria | <categoria> |
+            | preco     | <preco>     |
         Quando submeto o cadastro desse item
-        Então deve conter a mensagem de alerta: "Adicione uma foto no seu anúncio!"
+        Então deve conter a mensagem de alerta: "<saida>"
+
+        Exemplos:
+            | foto          | nome                  | categoria          | preco  | saida                             |
+            |               | Microfone Shure       | Áudio e Tecnologia | 4000   | Adicione uma foto no seu anúncio! |
+            | kramer.jpg    |                       | Cordas             | 150000 | Informe a descrição do anúncio!   |
+            | trompete.jpg  | Trompete TOP          |                    | 3000   | Informe a categoria               |
+            | fender-sb.jpg | Fender do Dave Murray | Cordas             |        | Informe o valor da diária         |
