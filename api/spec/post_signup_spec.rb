@@ -6,6 +6,7 @@ describe "POST/signup" do
     before(:all) do
       payload = { name: "Janick Gers", email: "gers@gmail.com", password: "pwd123" }
       MongoDB.new.remove_user(payload[:email])
+
       @result = Signup.new.create(payload)
     end
 
