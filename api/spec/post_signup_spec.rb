@@ -41,7 +41,7 @@ describe "POST/signup" do
   #email
   #password
 
-  examples = Helpers::get_fixture("user")
+  examples = Helpers::get_fixture("signup")
 
   examples.each do |e|
     context "#{e[:title]}" do

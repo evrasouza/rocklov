@@ -1,0 +1,47 @@
+---
+- title: Campo Nome em Branco
+  payload:
+    name: ''
+    email: 'nomeembranco@gmail.com'
+    password: 'pwd123'
+  code: 412
+  error: required name
+- title: Sem Enviar o campo nome
+  payload:
+    email: 'semcamponome@gmail.com'
+    password: 'pwd123'
+  code: 412
+  error: required name
+- title: Email em Branco
+  payload:
+    name: 'Email em Branco'
+    email: ''
+    password: 'pwd123'
+  code: 412
+  error: required email
+- title: Email invalido
+  payload:
+    name: 'Email invalido'
+    email: 'emailinvalido##gmail.com'
+    password: 'pwd123'
+  code: 412
+  error: wrong email
+- title: Sem o campo email
+  payload:
+    name: Sem o campo email
+    password: 'pwd123'
+  code: 412
+  error: required email
+- title: Senha em branco
+  payload:
+    name: 'Senha em branco'
+    email: senhaembranco@gmail.com
+    password: ''
+  code: 412
+  error: required password
+- title: Sem o campo senha
+  payload:
+    name: 'Sem o campo senha'
+    email: 'semocamposenha@gmail.com'
+  code: 412
+  error: required password
