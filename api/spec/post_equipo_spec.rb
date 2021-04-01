@@ -7,10 +7,8 @@ describe "POST/equipos" do
 
   context "Novo Equipo" do
     before(:all) do
-      thumbnail = File.open(File.join(Dir.pwd, "spec/fixtures/images", "kramer.jpg"), "rb")
-
       payload = {
-        thumbnail: thumbnail,
+        thumbnail: Helpers::get_thumb("kramer.jpg"),
         name: "kramer Eddie Van Halen",
         category: "Cordas",
         price: 299,
@@ -28,10 +26,8 @@ describe "POST/equipos" do
 
   context "Nao Autorizado" do
     before(:all) do
-      thumbnail = File.open(File.join(Dir.pwd, "spec/fixtures/images", "baixo.jpg"), "rb")
-
       payload = {
-        thumbnail: thumbnail,
+        thumbnail: Helpers::get_thumb("baixo.jpg"),
         name: "Baixo do Steve Harris",
         category: "Cordas",
         price: 280,
