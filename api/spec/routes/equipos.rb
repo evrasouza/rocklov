@@ -11,7 +11,7 @@ class Equipos < BaseApi
            )
   end
 
-  def findd_by_id(equipo_id, user_id)
+  def find_by_id(equipo_id, user_id)
     return self.class.get(
              "/equipos/#{equipo_id}",
              headers: {
