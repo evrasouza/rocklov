@@ -10,7 +10,7 @@ Funcionalidade: Cadastro
 
         Dado que acesso a página de cadastro
         Quando submeto o seguinte formulário de cadastro:
-            | nome          | email             | senha  |
+            | nome         | email            | senha  |
             | Rafael Souza | rafael@gmail.com | pwd123 |
         Então sou redirecionado para o Dashboard
 
