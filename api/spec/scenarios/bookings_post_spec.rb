@@ -8,10 +8,10 @@ describe "POST /equipos/{equipo_id}/bookings" do
   context "Solicitar locacao" do
     before(:all) do
 
-      # dado que usuário_id tem um equipamento para locacao
+      # dado que usuario_id tem um equipamento para locacao
 
       result = Sessions.new.login({ email: "murray@gmail.com", password: "pwd123" })
-      usuário_id = result.parsed_response["_id"]
+      usuario_id = result.parsed_response["_id"]
 
       equipamento = {
         thumbnail: Helpers::get_thumb("fender-sb.jpg"),
@@ -19,8 +19,8 @@ describe "POST /equipos/{equipo_id}/bookings" do
         category: "Cordas",
         price: 312,
       }
-      MongoDB.new.remove_equipo(equipamento[:name], usuário_id)
-      result_equipo = Equipos.new.create(equipamento, usuário_id)
+      MongoDB.new.remove_equipo(equipamento[:name], usuario_id)
+      result_equipo = Equipos.new.create(equipamento, usuario_id)
       equipamento_id = result_equipo.parsed_response["_id"]
 
       # Quando solicito a locacao do equipamento
