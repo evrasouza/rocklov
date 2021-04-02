@@ -50,7 +50,7 @@ Dado("que eu tenho um anuncio indesejado:") do |table|
   visit current_path
 end
 
-Quando("eu apago esse anuncio") do
+Quando("eu solicito a exclusao desse item") do
   @dash_page.request_removal(@equipo[:name])
 end
 
@@ -62,4 +62,13 @@ Entao("nao devo ver esse item no meu dashboard") do
   expect(
     @dash_page.has_no_equipo?(@equipo[:name])
   ).to be true
+end
+
+Quando("nao confirmo a solicitacao") do
+  @dash_page.cancel_removal
+end
+
+Então("esse item deve permanecer no meu dashboard") do
+  expect(@dash_page.equipo_list).to have_content @equipo[:name]
+  expect(@dash_page.equipo_list).to have_content "R$#{@equipo[:price]}/dia"
 end

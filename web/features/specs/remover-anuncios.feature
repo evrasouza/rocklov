@@ -16,10 +16,11 @@ Contexto: Login
             | nome      | Telecaster     |
             | categoria | Cordas         |
             | preco     | 666            |
-        Quando eu apago esse anuncio
+        Quando eu solicito a exclusao desse item
             E confirmo a exclusao
         Entao nao devo ver esse item no meu dashboard
 
+    @desistir
     Cenario: Desistir da exclusao de um anúncio
 
         Dado que eu tenho um anuncio indesejado:
@@ -27,6 +28,6 @@ Contexto: Login
             | nome      | conga     |
             | categoria | Outros    |
             | preco     | 99        |
-        Quando eu apago esse anuncio
+        Quando eu solicito a exclusao desse item
             Mas nao confirmo a solicitacao
-        Entao devo ver esse item no meu dashboard
+        Entao esse item deve permanecer no meu dashboard

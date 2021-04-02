@@ -28,4 +28,10 @@ class DashPage
     visit current_path
     sleep 1 #think time
   end
+
+  def cancel_removal
+    click_on "Não"
+    visit current_path
+    sleep 1 #think time
+  end
 end
