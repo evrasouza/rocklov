@@ -30,8 +30,11 @@ Dado("acesso meu dashboard") do
   expect(@dash_page.on_dash?).to be true
 end
 
-Quando("{string} e {string} solicita a locacao desse equipo") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+Quando("{string} e {string} solicita a locacao desse equipo") do |email, password|
+  user_id = SessionsService.new.get_user_id(email, password)
+  EquiposService.new.booking(@equipo_id, user_id)
+
+  sleep 10
 end
 
 Entao("devo ver a seguinte mensagem:") do |doc_string|
