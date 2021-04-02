@@ -25,7 +25,7 @@ describe "POST/signup" do
     end
 
     it "deve retornar 409" do
-      expect(@result.code).to eql 409
+      expect(@result.code).to eql 412
     end
 
     it "valida mensagem de erro: Email already exists :(" do
