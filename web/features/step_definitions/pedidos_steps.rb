@@ -33,14 +33,14 @@ end
 Quando("{string} e {string} solicita a locacao desse equipo") do |email, password|
   user_id = SessionsService.new.get_user_id(email, password)
   EquiposService.new.booking(@equipo_id, user_id)
-
-  sleep 10
 end
 
 Entao("devo ver a seguinte mensagem:") do |doc_string|
-  pending # Write code here that turns the phrase above into concrete actions
+  expect_message = doc_string.gsub("DATA_ATUAL", Time.now.strftime("%d/%m/%Y"))
+  expect(@dash_page.order).to have_text expect_message
 end
 
-Entao("devo ver os links: {string} e {string} no pedido") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+Entao("devo ver os links: {string} e {string} no pedido") do |button_accept, button_reject|
+  expect(@dash_page.order_actions(button_accept)).to be true
+  expect(@dash_page.order_actions(button_reject)).to be true
 end
