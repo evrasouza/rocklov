@@ -5,7 +5,10 @@ Funcionalidade: Remover Anúncios
     Quero poder remover esse anúncio
     Para que eu possa manter meu dashboard atualizado
 
+Contexto: Login
+        * Login com "eloy@gmail.com" e "pwd123"
 
+    @anuncio
     Cenario: Remover um anúncio
 
         Dado que eu tenho um anuncio indesejado:

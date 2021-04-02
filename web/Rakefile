@@ -15,6 +15,7 @@ task :local_seeds do
   users = [
     { name: "Everton Souza", email: "everton@gmail.com", password: to_md5("pwd123") },
     { name: "RaFael Souza", email: "rafael@gmail.com", password: to_md5("pwd123") },
+    { name: "Eloy Casagrande", email: "eloy@gmail.com", password: to_md5("pwd123") },
   ]
 
   MongoDB.new.drop_danger
