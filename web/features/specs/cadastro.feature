@@ -9,15 +9,15 @@ Funcionalidade: Cadastro
     Cenario: Fazer cadastro
 
         Dado que acesso a página de cadastro
-        Quando submeto o seguinte forulário de cadastro:
+        Quando submeto o seguinte formulário de cadastro:
             | nome          | email             | senha  |
-            | Everton Souza | everton@gmail.com | pwd123 |
+            | Rafael Souza | rafael@gmail.com | pwd123 |
         Então sou redirecionado para o Dashboard
 
     Esquema do Cenário: Tentativa de Cadastro
 
         Dado que acesso a página de cadastro
-        Quando submeto o seguinte forulário de cadastro:
+        Quando submeto o seguinte formulário de cadastro:
             | nome         | email         | senha         |
             | <nome_input> | <email_input> | <senha_input> |
         Então vejo a mensagem de alerta: "<mensagem_output>"
