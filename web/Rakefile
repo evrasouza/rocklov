@@ -16,12 +16,14 @@ task :local_seeds do
     { name: "Everton Souza", email: "everton@gmail.com", password: to_md5("pwd123") },
     { name: "RaFael Souza", email: "rafael@gmail.com", password: to_md5("pwd123") },
     { name: "Eloy Casagrande", email: "eloy@gmail.com", password: to_md5("pwd123") },
+    { name: "Joao Anuunciante", email: "joao@anuciante.com", password: to_md5("pwd123") },
+    { name: "Maria Locataria", email: "maria@locataria.com", password: to_md5("pwd123") },
   ]
 
   MongoDB.new.drop_danger
   MongoDB.new.insert_users(users)
 
-  sh "cucumber"
+  #sh "cucumber"
 end
 
 task :hmg_seeds do
@@ -30,6 +32,9 @@ task :hmg_seeds do
   users = [
     { name: "Everton Souza", email: "everton@gmail.com", password: to_md5("pwd123") },
     { name: "RaFael Souza", email: "rafael@gmail.com", password: to_md5("pwd123") },
+    { name: "Eloy Casagrande", email: "eloy@gmail.com", password: to_md5("pwd123") },
+    { name: "Joao Anuunciante", email: "joao@anuciante.com", password: to_md5("pwd123") },
+    { name: "Maria Locataria", email: "maria@locataria.com", password: to_md5("pwd123") },
   ]
 
   MongoDB.new.drop_danger

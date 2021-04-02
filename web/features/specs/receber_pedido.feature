@@ -5,7 +5,7 @@ Funcionalidade: Reeber pedidos de Loação
     Desejo reeber pedidos de locação
     Para que eu possa decidir se quero prova-los ou rejeita-los
 
-    @anuncio
+    @receber
     Cenario: Receber pedido
 
         Dado que meu perfil de anunciante é "joao@anuciante.com" e "pwd123"
